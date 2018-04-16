@@ -4,26 +4,28 @@
 using namespace std;
 using namespace Chapter01;
 
+
 int main() {
     std::cout << "Hello, Car!" << std::endl;
 
-    Car volvo;
+    /*volvo*/
+    Car volvo(20,30);
     cout << "The Volvo speed: " << volvo.GetSpeed() << " miles per hour, "
-            << "direction: " << volvo.GetDirection() << " degrees." << endl;
+         << "direction: " << volvo.GetDirection() << " degrees." << endl;
 
-    volvo.Accelerate(40);
-    volvo.TurnRight(30);
+    volvo.Accelerate(30);
+    volvo.TurnLeft(60);
 
     cout << "The Volvo speed: " << volvo.GetSpeed() << " miles per hour, "
          << "direction: " << volvo.GetDirection() << " degrees." << endl;
 
-    volvo.Decelerate(10);
-    volvo.TurnLeft(10);
+    volvo.Decelerate(60);
+    volvo.TurnRight(50);
 
     cout << "The Volvo speed: " << volvo.GetSpeed() << " miles per hour, "
-            << "direction: " << volvo.GetDirection() << " degrees." << endl;
+         << "direction: " << volvo.GetDirection() << " degrees." << endl;
 
-
+    /*fiat*/
     const Car fiat(100,90);
     cout << "The Fiat speed: " << fiat.GetSpeed() << " miles per hour, "
          << "direction: " << fiat.GetDirection() << " degrees." << endl;

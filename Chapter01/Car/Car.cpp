@@ -2,6 +2,7 @@
 // Created by Yves Gingras on 18-04-15.
 //
 
+#include <runetype.h>
 #include "Car.h"
 
 namespace Chapter01 {
@@ -18,9 +19,7 @@ namespace Chapter01 {
         /*Empty*/
     }
 
-    Car::~Car() {
-        /*Empty*/
-    }
+    Car::~Car() = default;
 
     int Car::GetSpeed() const {
         return m_speed;
@@ -32,17 +31,37 @@ namespace Chapter01 {
 
     void Car::Accelerate(int speed) {
         m_speed += speed;
+
+        if(m_speed > 200)
+            m_speed = 200;
     }
 
     void Car::Decelerate(int speed) {
         m_speed -= speed;
+
+        if(m_speed < 0) {
+            m_speed = -m_speed;
+
+            if(m_speed > 200)
+                m_speed = 200;
+        }
+
+        if (m_direction < 180)
+            m_direction += 180;
+        else
+            m_direction -= 180;
     }
 
     void Car::TurnLeft(int degrees) {
         m_direction -= degrees;
+        m_direction %= 360;
+
+        if (m_direction < 0)
+            m_direction += 360;
     }
 
     void Car::TurnRight(int degrees) {
         m_direction += degrees;
+        m_direction %= 360;
     }
 }
