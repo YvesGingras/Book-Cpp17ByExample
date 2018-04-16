@@ -60,6 +60,7 @@
 /.idea/**
 /Chapter01/.idea/**
 /Chapter01/Dice/.idea/**
+/Chapter01/Car/.idea/**
 
 # CMake
 cmake-build-debug/
