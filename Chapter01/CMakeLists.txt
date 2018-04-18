@@ -7,10 +7,12 @@ set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
 add_subdirectory(Dice)
 add_subdirectory(Car)
 add_subdirectory(Person)
+add_subdirectory(Stack)
 
 
 add_executable(
         Chapter01 main.cpp
         Dice main.cpp
         Car main.cpp
-        Person main.cpp)
+        Person main.cpp
+        Stack main.cpp)
