@@ -64,6 +64,8 @@
 /Chapter01/Person/.idea/**
 /Chapter01/Stack/.idea/**
 /Chapter01/Queue/.idea/**
+/Chapter02/.idea/**
+/Chapter02/List/.idea/**
 
 
 # CMake
