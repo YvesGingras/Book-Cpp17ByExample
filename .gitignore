@@ -66,6 +66,8 @@
 /Chapter01/Queue/.idea/**
 /Chapter02/.idea/**
 /Chapter02/List/.idea/**
+/Chapter02/Set/.idea/**
+
 
 
 # CMake
